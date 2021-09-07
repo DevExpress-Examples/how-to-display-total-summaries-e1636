@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXGrid_DisplayTotals", "DXGrid_DisplayTotals\DXGrid_DisplayTotals.csproj", "{873CE9D0-FF2A-4E83-87BE-A697EAB8C553}"
+# Visual Studio 16
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXGrid_DisplayTotals", "DXGrid_DisplayTotals\DXGrid_DisplayTotals.Net5.csproj", "{873CE9D0-FF2A-4E83-87BE-A697EAB8C553}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
