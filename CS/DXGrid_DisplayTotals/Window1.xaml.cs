@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows;
-using System.Windows.Documents;
-using DevExpress.Data;
+﻿using DevExpress.Data;
 using DevExpress.Xpf.Grid;
+using System;
+using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace DXGrid_DisplayTotals {
     public partial class Window1 : Window {
         public Window1() {
             InitializeComponent();
-            grid.ItemsSource = new AccountList().GetData();
+            grid.ItemsSource = AccountList.GetData();
         }
-        private void CreateTotalSummaries() {
+        // Define total summaries in code:
+        void CreateTotalSummaries() {
             grid.TotalSummary.Add(new GridSummaryItem() {
                 FieldName = "UserName",
                 SummaryType = SummaryItemType.Count,
@@ -28,11 +28,8 @@ namespace DXGrid_DisplayTotals {
         }
     }
     public class AccountList {
-        public List<Account> GetData() {
-            return CreateAccounts();
-        }
-        private List<Account> CreateAccounts() {
-            List<Account> list = new List<Account>();
+        public static ObservableCollection<Account> GetData() {
+            ObservableCollection<Account> list = new ObservableCollection<Account>();
             list.Add(new Account() {
                 UserName = "Nick White",
                 RegistrationDate = DateTime.Today,
