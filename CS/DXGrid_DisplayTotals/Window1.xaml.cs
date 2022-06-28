@@ -1,6 +1,7 @@
 ﻿using DevExpress.Data;
 using DevExpress.Xpf.Grid;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
 
@@ -12,18 +13,20 @@ namespace DXGrid_DisplayTotals {
         }
         // Define total summaries in code:
         void CreateTotalSummaries() {
-            grid.TotalSummary.Add(new GridSummaryItem() {
-                FieldName = "UserName",
-                SummaryType = SummaryItemType.Count,
-                DisplayFormat = "Total Users: {0}"
-            });
-            grid.TotalSummary.Add(new GridSummaryItem() {
-                FieldName = "Age",
-                SummaryType = SummaryItemType.Min
-            });
-            grid.TotalSummary.Add(new GridSummaryItem() {
-                FieldName = "Age",
-                SummaryType = SummaryItemType.Max
+            grid.TotalSummary.AddRange(new List<GridSummaryItem>() {
+                new GridSummaryItem() {
+                    SummaryType = SummaryItemType.Count,
+                    Alignment = GridSummaryItemAlignment.Left,
+                    DisplayFormat = "Total Users: {0}"
+                },
+                new GridSummaryItem() {
+                    FieldName = "Age",
+                    SummaryType = SummaryItemType.Min
+                },
+                new GridSummaryItem() {
+                    FieldName = "Age",
+                    SummaryType = SummaryItemType.Max
+                }
             });
         }
     }

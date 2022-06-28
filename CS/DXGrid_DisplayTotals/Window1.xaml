@@ -2,17 +2,17 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
-    Title="Window1" Height="300" Width="521">
+    Title="Window1" Height="350" Width="600">
     <dxg:GridControl x:Name="grid" AutoGenerateColumns="AddNew">
         <!-- Define total summaries in XAML: -->
         <dxg:GridControl.TotalSummary>
-            <dxg:GridSummaryItem FieldName="UserName" SummaryType="Count"
+            <dxg:GridSummaryItem SummaryType="Count" Alignment="Left"
                                  DisplayFormat="Total Users: {0}"/>
             <dxg:GridSummaryItem FieldName="Age" SummaryType="Min"/>
             <dxg:GridSummaryItem FieldName="Age" SummaryType="Max"/>
         </dxg:GridControl.TotalSummary>
         <dxg:GridControl.View>
-            <dxg:TableView AutoWidth="True" ShowTotalSummary="True"/>
+            <dxg:TableView AutoWidth="True" ShowTotalSummary="True" ShowFixedTotalSummary="True"/>
         </dxg:GridControl.View>
     </dxg:GridControl>
 </Window>
