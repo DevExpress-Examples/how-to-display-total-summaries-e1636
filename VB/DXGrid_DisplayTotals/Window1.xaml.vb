@@ -1,6 +1,7 @@
 Imports DevExpress.Data
 Imports DevExpress.Xpf.Grid
 Imports System
+Imports System.Collections.Generic
 Imports System.Collections.ObjectModel
 Imports System.Windows
 
@@ -16,9 +17,7 @@ Namespace DXGrid_DisplayTotals
 
         ' Define total summaries in code:
         Private Sub CreateTotalSummaries()
-            Me.grid.TotalSummary.Add(New GridSummaryItem() With {.FieldName = "UserName", .SummaryType = SummaryItemType.Count, .DisplayFormat = "Total Users: {0}"})
-            Me.grid.TotalSummary.Add(New GridSummaryItem() With {.FieldName = "Age", .SummaryType = SummaryItemType.Min})
-            Me.grid.TotalSummary.Add(New GridSummaryItem() With {.FieldName = "Age", .SummaryType = SummaryItemType.Max})
+            Me.grid.TotalSummary.AddRange(New List(Of GridSummaryItem)() From {New GridSummaryItem() With {.SummaryType = SummaryItemType.Count, .Alignment = GridSummaryItemAlignment.Left, .DisplayFormat = "Total Users: {0}"}, New GridSummaryItem() With {.FieldName = "Age", .SummaryType = SummaryItemType.Min}, New GridSummaryItem() With {.FieldName = "Age", .SummaryType = SummaryItemType.Max}})
         End Sub
     End Class
 
