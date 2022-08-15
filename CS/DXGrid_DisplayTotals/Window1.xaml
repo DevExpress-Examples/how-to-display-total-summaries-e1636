@@ -12,7 +12,7 @@
             <dxg:GridSummaryItem FieldName="Age" SummaryType="Max"/>
         </dxg:GridControl.TotalSummary>
         <dxg:GridControl.View>
-            <dxg:TableView AutoWidth="True" ShowTotalSummary="True" ShowFixedTotalSummary="True"/>
+            <dxg:TableView AutoWidth="True" TotalSummaryPosition="Bottom" ShowFixedTotalSummary="True"/>
         </dxg:GridControl.View>
     </dxg:GridControl>
 </Window>
