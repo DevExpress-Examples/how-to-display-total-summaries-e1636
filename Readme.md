@@ -11,7 +11,7 @@ This example displays total summaries specified in XAML and demonstrates how to 
 
 1. Create a [GridSummaryItem](http://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridSummaryItem) object and specify its properties.
 2. Add this object to the [GridControl.TotalSummary](http://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl.TotalSummary) collection.
-3. Set the [DataViewBase.ShowTotalSummary](http://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataViewBase.ShowTotalSummary) property to `true` to display the [Summary Panel](http://docs.devexpress.com/WPF/6259/controls-and-libraries/data-grid/visual-elements/common-elements/summary-panel). For the [Fixed Summary Panel](http://docs.devexpress.com/WPF/11404/controls-and-libraries/data-grid/visual-elements/common-elements/fixed-summary-panel), use the [DataViewBase.ShowFixedTotalSummary](http://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataViewBase.ShowFixedTotalSummary) property.
+3. Specify the [DataViewBase.TotalSummaryPosition](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataViewBase.TotalSummaryPosition?v=22.2) property to display the [Summary Panel](http://docs.devexpress.com/WPF/6259/controls-and-libraries/data-grid/visual-elements/common-elements/summary-panel). For the [Fixed Summary Panel](http://docs.devexpress.com/WPF/11404/controls-and-libraries/data-grid/visual-elements/common-elements/fixed-summary-panel), use the [DataViewBase.ShowFixedTotalSummary](http://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataViewBase.ShowFixedTotalSummary) property.
 
 ## Files to look at
 
